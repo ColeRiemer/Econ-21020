@@ -65,7 +65,8 @@ nobs_set <-  c(5, 10, 100, 1000)
 # To calculate the means, it's convenient to use a simple for-loop. Note that
 #     we must first initialize a matrix to store our results in. This matrix
 #     should be of appropriate dimension. Then, we loop over all possible values
-#     in nobs_set.
+#     in nobs_set. Note that we draw individual samples from the exponential 
+#     distribution with rate 2 so that the expected value is 1/2.
 
 res_sim <- matrix(NA, nrow = n_smplmeans, ncol = length(nobs_set))
 for (j in 1:length(nobs_set)) {
